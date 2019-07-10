@@ -103,5 +103,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# sublime config
+*.sublime-workspace
+*.sublime-project
+
 .vscode/
 .DS_Store
