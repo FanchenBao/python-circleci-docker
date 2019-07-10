@@ -1,6 +1,7 @@
 import hello_world
 import unittest
 
+
 class TestHelloWorld(unittest.TestCase):
 
     def setUp(self):
@@ -10,11 +11,13 @@ class TestHelloWorld(unittest.TestCase):
     def test_status_code(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-    
+
     def test_message(self):
         response = self.app.get('/')
         message = hello_world.wrap_html('Hello PyLadies Chicago!')
-        self.assertEqual(response.data, bytes(message, 'utf-8'))  # turn message into bytes for proper comparison
+        # turn message into bytes for proper comparison
+        self.assertEqual(response.data, bytes(message, 'utf-8'))
+
 
 if __name__ == '__main__':
     unittest.main()
